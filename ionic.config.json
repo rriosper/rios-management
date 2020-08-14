@@ -1,0 +1,7 @@
+{
+  "name": "rios-management",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
