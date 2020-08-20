@@ -1,4 +1,4 @@
-import { ColorModeProvider, ThemeProvider } from "@xstyled/styled-components";
+import { ThemeProvider } from "@xstyled/styled-components";
 import React from "react";
 import GlobalStyle from "./GlobalStyle";
 import values from "./values";
@@ -10,10 +10,8 @@ type ThemeProps = {
 const Theme: React.FC<ThemeProps> = ({ children }: ThemeProps) => {
   return (
     <ThemeProvider theme={values}>
-      <ColorModeProvider>
-        <GlobalStyle />
-        {children}
-      </ColorModeProvider>
+      <GlobalStyle />
+      {children}
     </ThemeProvider>
   );
 };

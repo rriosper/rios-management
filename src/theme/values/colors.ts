@@ -9,13 +9,6 @@ const colors = {
   bg: "#FFF",
   fg: "#FAFAFA",
   border: "#7F8C8D",
-
-  modes: {
-    dark: {
-      text: "#FFF",
-      bg: "#000",
-    },
-  },
 };
 
 export default colors;

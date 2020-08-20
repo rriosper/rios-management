@@ -1,6 +1,6 @@
 import { IonApp, IonRouterOutlet } from "@ionic/react";
 import { IonReactRouter as Router } from "@ionic/react-router";
-import React from "react";
+import React, { Suspense } from "react";
 
 import Scenes from "../scenes";
 import Theme from "../theme";
@@ -12,15 +12,17 @@ const App: React.FC = () => {
   useInit();
   return (
     <IonApp>
-      <Store>
-        <Theme>
-          <Router>
-            <IonRouterOutlet>
-              <Scenes />
-            </IonRouterOutlet>
-          </Router>
-        </Theme>
-      </Store>
+      <Suspense fallback={null}>
+        <Store>
+          <Theme>
+            <Router>
+              <IonRouterOutlet>
+                <Scenes />
+              </IonRouterOutlet>
+            </Router>
+          </Theme>
+        </Store>
+      </Suspense>
     </IonApp>
   );
 };
